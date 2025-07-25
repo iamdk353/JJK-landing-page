@@ -84,7 +84,7 @@ const Hero = () => {
         className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75"
       >
         <div>
-          <video
+          {/* <video
             ref={nextVdRef}
             src={"/videos/hero-main.mp4"}
             loop
@@ -100,6 +100,17 @@ const Hero = () => {
             autoPlay
             loop
             muted
+            onLoadedData={() => {
+              setLoading(false);
+            }}
+            className="absolute left-0 top-0 size-full object-cover object-center"
+          /> */}
+          <video
+            src="/videos/hero-main.mp4"
+            autoPlay
+            loop
+            muted
+            onLoadedData={() => setLoading(false)}
             className="absolute left-0 top-0 size-full object-cover object-center"
           />
         </div>
